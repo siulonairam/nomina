@@ -10,7 +10,7 @@ class Docente
         @horas= horas
     end 
 
-        
+
     def grade_status
         if @grado == "Bachiller"
             status = 40
@@ -50,20 +50,34 @@ class Docente
             status = -40
         end
     end
-     
+
     def mensual
         total = (((grade_status * @horas) * antiguedad_status) + retraso_status).round
-     end
-end
+    end
 
-class Nomina
-    def 
-end
 
+    def listgral  
+          
+        puts "Profesor #{@name} #{@lastname},RUT: #{@rut}, tiene grado #{@grado}, Antiguedad #{@antiguedad} y un sueldo de #{profe1.mensual}"
+        #puts "Profesor #{profe2.name} #{profe1.lastname},RUT: #{profe1.rut}, tiene grado #{profe1.grado}, Antiguedad #{profe1.antiguedad} y un sueldo de #{profe1.mensual}"
+        #puts "Profesor #{profe3.name} #{profe1.lastname},RUT: #{profe1.rut}, tiene grado #{profe1.grado}, Antiguedad #{profe1.antiguedad} y un sueldo de #{profe1.mensual}"
+        #puts "Profesor #{profe1.name} #{profe1.lastname},RUT: #{profe1.rut}, tiene grado #{profe1.grado}, Antiguedad #{profe1.antiguedad} y un sueldo de #{profe1.mensual}"
+        #puts "Profesor #{profe1.name} #{profe1.lastname},RUT: #{profe1.rut}, tiene grado #{profe1.grado}, Antiguedad #{profe1.antiguedad} y un sueldo de #{profe1.mensual}"
+        #puts "Profesor #{profe1.name} #{profe1.lastname},RUT: #{profe1.rut}, tiene grado #{profe1.grado}, Antiguedad #{profe1.antiguedad} y un sueldo de #{profe1.mensual}"
+        #puts "Profesor #{profe1.name} #{profe1.lastname},RUT: #{profe1.rut}, tiene grado #{profe1.grado}, Antiguedad #{profe1.antiguedad} y un sueldo de #{profe1.mensual}"
+        #puts "Profesor #{profe1.name} #{profe1.lastname},RUT: #{profe1.rut}, tiene grado #{profe1.grado}, Antiguedad #{profe1.antiguedad} y un sueldo de #{profe1.mensual}"
+    end
+ end
 
 # ingresar nombre, apellido, rut, grado, retraso, antiguedad y horas
 profe1=Docente.new("Enrique", "Melgarejo", "25654787", "Bachiller", 11, 0, 72)  
-profe2=Docente.new("Richar", "Lujano", "2555555", "Titulado", 11, 15, 78)
+profe2=Docente.new("Richar", "Lujano", "2555555", "Titulado", 15, 15, 78)
+profe3=Docente.new("Matias", "Toro", "245555555", "Maestria", 5, 0, 50)
+profe4=Docente.new("Luis", "Rivero", "29999955", "Doctorado", 4, 10, 25)
+profe5=Docente.new("Pedro", "Melgarejo", "25654787", "Bachiller", 11, 0, 72)  
+profe6=Docente.new("Ernesto", "Lujano", "2555555", "Titulado", 15, 15, 78)
+profe7=Docente.new("Mati", "Toro", "245555555", "Maestria", 5, 0, 50)
+profe8=Docente.new("Mariano", "Rivero", "29999955", "Doctorado", 4, 10, 25)
 
 # puts remuneracion = [ ]
 # puts remuneracion.push profe1.mensual
@@ -72,11 +86,14 @@ profe2=Docente.new("Richar", "Lujano", "2555555", "Titulado", 11, 15, 78)
 
 
 
-# puts profe1.name
+
 # puts profe1.antiguedad
 # puts profe1.horas
 puts profe2.mensual
 puts profe1.mensual
-# puts profe1.mensual
+
+
+
+profe8.listgral
 
 
